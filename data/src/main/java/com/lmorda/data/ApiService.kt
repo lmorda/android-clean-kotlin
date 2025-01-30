@@ -6,7 +6,7 @@ import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 
-const val SEARCH_BASE_URL = "https://api.github.com/search/repositories"
+const val BASE_URL = "https://api.github.com"
 
 class ApiService(
     private val client: HttpClient,
@@ -18,7 +18,7 @@ class ApiService(
         page: Int,
         perPage: Int
     ): GithubReposDto {
-        return client.get(SEARCH_BASE_URL) {
+        return client.get("$BASE_URL/search/repositories") {
             url {
                 parameters.append("q", query)
                 parameters.append("sort", sort)
@@ -30,6 +30,6 @@ class ApiService(
     }
 
     suspend fun getRepo(id: Long): GithubRepoDto {
-        return client.get("$SEARCH_BASE_URL/$id").body()
+        return client.get("$BASE_URL/repositories/$id").body()
     }
 }

@@ -20,6 +20,4 @@ dependencies {
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
-    testImplementation(libs.junit)
-    testImplementation(libs.koin.test)
 }

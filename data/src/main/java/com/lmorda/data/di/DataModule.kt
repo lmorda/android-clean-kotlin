@@ -13,8 +13,9 @@ import kotlinx.serialization.json.Json
 import org.koin.dsl.module
 
 val dataModule = module {
+
     single {
-        HttpClient(CIO) {
+        HttpClient(engineFactory = CIO) {
             install(ContentNegotiation) {
                 json(Json { ignoreUnknownKeys = true })
             }
