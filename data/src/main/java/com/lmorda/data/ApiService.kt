@@ -1,0 +1,36 @@
+package com.lmorda.data
+
+import com.lmorda.data.model.GithubRepoDto
+import com.lmorda.data.model.GithubReposDto
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.request.get
+import javax.inject.Inject
+
+const val SEARCH_BASE_URL = "https://api.github.com/search/repositories"
+
+class ApiService @Inject constructor(
+    private val client: HttpClient,
+) {
+    suspend fun searchRepositories(
+        query: String,
+        sort: String,
+        order: String,
+        page: Int,
+        perPage: Int
+    ): GithubReposDto {
+        return client.get(SEARCH_BASE_URL) {
+            url {
+                parameters.append("q", query)
+                parameters.append("sort", sort)
+                parameters.append("order", order)
+                parameters.append("page", page.toString())
+                parameters.append("per_page", perPage.toString())
+            }
+        }.body()
+    }
+
+    suspend fun getRepo(id: Long): GithubRepoDto {
+        return client.get("$SEARCH_BASE_URL/$id").body()
+    }
+}
