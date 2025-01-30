@@ -13,8 +13,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("org.jetbrains.kotlin.android")
                 apply("com.android.application")
-                apply("dagger.hilt.android.plugin")
-                apply("org.jetbrains.kotlin.kapt")
             }
             extensions.configure<BaseAppModuleExtension> {
                 configureAndroid(commonExtension = this)
@@ -22,8 +20,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-                add("implementation", libs.findLibrary("hilt.android").get())
-                add("kapt", libs.findLibrary("hilt.compiler").get())
                 add("implementation", libs.findLibrary("timber").get())
             }
         }

@@ -1,7 +1,6 @@
 package com.lmorda.clean
 
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -9,6 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.lmorda.explore.details.DetailsScreenRoute
 import com.lmorda.explore.list.ExploreScreenRoute
+import org.koin.androidx.compose.koinViewModel
 
 const val routeExplore = "explore"
 const val routeDetailsBase = "details"
@@ -23,7 +23,7 @@ internal fun CleanNavHost(navController: NavHostController) {
     ) {
         composable(route = routeExplore) {
             ExploreScreenRoute(
-                viewModel = hiltViewModel(),
+                viewModel = koinViewModel(), //todo: should this be moved to the explore module?
                 onNavigateToDetails = { id ->
                     navController.navigate("$routeDetailsBase/$id")
                 },
@@ -36,7 +36,7 @@ internal fun CleanNavHost(navController: NavHostController) {
             ),
         ) {
             DetailsScreenRoute(
-                viewModel = hiltViewModel(),
+                viewModel = koinViewModel(), //todo: should this be moved to the explore module?
                 onBack = {
                     navController.navigateUp()
                 },

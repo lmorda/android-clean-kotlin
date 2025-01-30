@@ -7,8 +7,8 @@ making it a strong foundation for building robust Android applications.
 
 - **Architecture:** Implements MVVM architecture
 - **UI:** Built with Jetpack Compose for UI and Compose Navigation for screen transitions
-- **Networking:** Utilizes Retrofit for API calls to fetch data from the GitHub API
-- **Dependency Injection:** Leverages Dagger Hilt for dependency management
+- **Networking:** Utilizes Ktor for API calls to fetch data from the GitHub API
+- **Dependency Injection:** Leverages Koin for dependency management
 - **Testing:** Includes unit tests with MockK and Compose UI screenshot tests with Espresso
 - **Modularization:** Follows a modularized approach to separate concerns and improve scalability
 
@@ -26,8 +26,8 @@ navigates to a detailed view showing additional information about the selected r
 - **Language:** Kotlin
 - **UI Framework:** Jetpack Compose
 - **Navigation:** Compose Navigation
-- **Networking:** Retrofit
-- **Dependency Injection:** Dagger Hilt
+- **Networking:** Ktor
+- **Dependency Injection:** Koin
 - **Architecture:** MVVM
 - **Testing:** MockK for unit testing, Jetpack Compose for screenshot tests
 - **Build System:** Gradle with Kotlin DSL

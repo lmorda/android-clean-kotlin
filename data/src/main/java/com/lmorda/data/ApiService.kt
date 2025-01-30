@@ -5,11 +5,10 @@ import com.lmorda.data.model.GithubReposDto
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
-import javax.inject.Inject
 
 const val SEARCH_BASE_URL = "https://api.github.com/search/repositories"
 
-class ApiService @Inject constructor(
+class ApiService(
     private val client: HttpClient,
 ) {
     suspend fun searchRepositories(

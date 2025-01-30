@@ -5,16 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lmorda.domain.DataRepository
 import com.lmorda.explore.details.DetailsContract.State
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 const val SAVED_ID_KEY = "id"
 
-@HiltViewModel
-class DetailsViewModel @Inject constructor(
+class DetailsViewModel(
     savedStateHandle: SavedStateHandle,
     private val dataRepository: DataRepository,
 ) : ViewModel() {

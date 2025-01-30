@@ -4,15 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lmorda.domain.DataRepository
 import com.lmorda.explore.list.ExploreContract.State
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class ExploreViewModel @Inject constructor(
+class ExploreViewModel(
     private val dataRepository: DataRepository,
 ) : ViewModel() {
 

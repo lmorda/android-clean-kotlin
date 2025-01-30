@@ -4,9 +4,8 @@ import com.lmorda.data.model.GithubRepoDto
 import com.lmorda.data.model.GithubReposDto
 import com.lmorda.domain.model.GithubRepo
 import com.lmorda.domain.model.Owner
-import javax.inject.Inject
 
-class GithubRepoMapper @Inject constructor() {
+class GithubRepoMapper {
 
     fun map(githubReposDto: GithubReposDto) =
         githubReposDto.items.map {

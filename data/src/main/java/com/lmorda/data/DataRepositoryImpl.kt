@@ -2,16 +2,13 @@ package com.lmorda.data
 
 import com.lmorda.data.mapper.GithubRepoMapper
 import com.lmorda.domain.DataRepository
-import javax.inject.Inject
-import javax.inject.Singleton
 
 const val PER_PAGE = 30
 const val QUERY = "android"
 const val ORDER = "desc"
 const val SORT = "stars"
 
-@Singleton
-class DataRepositoryImpl @Inject constructor(
+class DataRepositoryImpl(
     private val apiService: ApiService,
     private val mapper: GithubRepoMapper,
 ) : DataRepository {

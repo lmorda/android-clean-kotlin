@@ -16,6 +16,10 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":explore"))
     implementation(project(":utils"))
-    implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.navigation.compose)
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+    testImplementation(libs.junit)
+    testImplementation(libs.koin.test)
 }
