@@ -1,7 +1,7 @@
-# android-clean-architecture
+# android-clean-kotlin
 
 This project demonstrates Clean Architecture principles in an Android app.  The project highlights scalability, maintainability, and testability, 
-making it a strong foundation for building robust Android applications.
+making it a strong foundation for building robust Android applications.  All native Kotlin libraries were used including Koin and Ktor.
 
 ## Features
 
