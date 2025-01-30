@@ -6,11 +6,6 @@ kotlin = "2.1.0"
 coreKtx = "1.15.0"
 coroutines = "1.9.0"
 appcompat = "1.7.0"
-ktorClientCio = "3.0.3"
-ktorClientContentNegotiation = "3.0.3"
-ktorClientCore = "3.0.3"
-ktorClientLogging = "3.0.3"
-ktorSerializationKotlinxJson = "3.0.3"
 lifecycle = "2.8.7"
 
 # Compose
@@ -30,12 +25,13 @@ espressoCore = "3.6.1"
 hiltAndroidGradlePlugin = "2.52"
 hiltNavigationCompose = "1.2.0"
 
-# Retrofit
-retrofit = "2.11.0"
-okhttp = "4.12.0"
-kotlinxSerialization = "2.0.0"
-retrofitSerialization = "1.0.0"
-kotlinxJson = "1.7.1"
+# Ktor
+ktorClientCio = "3.0.3"
+ktorClientContentNegotiation = "3.0.3"
+ktorClientCore = "3.0.3"
+ktorClientLogging = "3.0.3"
+ktorSerializationKotlinxJson = "3.0.3"
+kotlinxSerialization = "2.0.21"
 
 # Other
 timber = "5.0.1"
