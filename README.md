@@ -40,7 +40,7 @@ navigates to a detailed view showing additional information about the selected r
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/lmorda/android-clean-architecture.git
+   git clone https://github.com/lmorda/android-clean-kotlin.git
    ```
 2. Open the project in Android Studio
 3. Sync Gradle
