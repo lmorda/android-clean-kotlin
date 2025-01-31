@@ -1,7 +1,7 @@
-# android-clean-architecture
+# android-clean-kotlin
 
 This project demonstrates Clean Architecture principles in an Android app.  The project highlights scalability, maintainability, and testability, 
-making it a strong foundation for building robust Android applications.
+making it a strong foundation for building robust Android applications.  All native Kotlin libraries were used including Koin and Ktor.
 
 ## Features
 
@@ -40,7 +40,7 @@ navigates to a detailed view showing additional information about the selected r
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/lmorda/android-clean-architecture.git
+   git clone https://github.com/lmorda/android-clean-kotlin.git
    ```
 2. Open the project in Android Studio
 3. Sync Gradle
