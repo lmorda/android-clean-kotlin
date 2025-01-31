@@ -15,6 +15,5 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
     implementation(libs.lottie)
-    implementation(libs.koin.android)
     androidTestImplementation(libs.androidx.ui.test.junit4)
 }

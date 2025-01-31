@@ -20,6 +20,8 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                add("implementation", platform(libs.findLibrary("koin.bom").get()))
+                add("implementation", libs.findLibrary("koin.android").get())
                 add("implementation", libs.findLibrary("timber").get())
                 add("testImplementation", libs.findLibrary("junit").get())
                 add("testImplementation", libs.findLibrary("kotlinx.coroutines.test").get())

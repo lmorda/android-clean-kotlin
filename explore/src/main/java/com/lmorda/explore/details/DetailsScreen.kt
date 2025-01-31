@@ -45,10 +45,11 @@ import com.lmorda.domain.model.mockDomainData
 import com.lmorda.explore.R
 import com.lmorda.explore.shared.RepositoryStats
 import com.lmorda.utils.shareText
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun DetailsScreenRoute(
-    viewModel: DetailsViewModel,
+    viewModel: DetailsViewModel = koinViewModel(),
     onBack: () -> Unit,
 ) {
     val state = viewModel.state.collectAsState().value

@@ -64,7 +64,6 @@ androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 # Koin
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-koin-test = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin" }
 koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 
 # Ktor

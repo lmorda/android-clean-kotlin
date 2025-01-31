@@ -20,6 +20,8 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                add("implementation", platform(libs.findLibrary("koin.bom").get()))
+                add("implementation", libs.findLibrary("koin.android").get())
                 add("implementation", libs.findLibrary("timber").get())
             }
         }

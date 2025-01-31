@@ -53,10 +53,11 @@ import com.lmorda.domain.model.GithubRepo
 import com.lmorda.domain.model.mockDomainData
 import com.lmorda.explore.R
 import com.lmorda.explore.shared.RepositoryStats
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun ExploreScreenRoute(
-    viewModel: ExploreViewModel,
+    viewModel: ExploreViewModel = koinViewModel(),
     onNavigateToDetails: (Long) -> Unit,
 ) {
     val state = viewModel.state.collectAsState().value
