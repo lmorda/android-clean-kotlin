@@ -128,11 +128,7 @@ private fun ExploreContent(
     when {
         state.exception != null -> ExploreLoadingError()
         state.isFirstLoad -> ExploreProgressIndicator()
-        else -> ExploreList(
-            listState = listState,
-            state = state,
-            onNavigateToDetails = onNavigateToDetails,
-        )
+        else -> ExploreLoadingError()
     }
     if (!state.isLoading()) {
         PaginationEffect(
